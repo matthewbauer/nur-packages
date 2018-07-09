@@ -400,8 +400,6 @@ stdenv.mkDerivation rec {
     description = "Tor Browser Bundle";
     homepage = https://www.torproject.org/;
     platforms = attrNames srcs;
-    maintainers = with maintainers; [ offline matejc doublec thoughtpolice joachifm ];
-    hydraPlatforms = [];
     # MPL2.0+, GPL+, &c.  While it's not entirely clear whether
     # the compound is "libre" in a strict sense (some components place certain
     # restrictions on redistribution), it's free enough for our purposes.

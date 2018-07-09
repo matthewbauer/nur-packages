@@ -79,7 +79,6 @@ in buildPythonPackage rec {
     description = "Computation using data flow graphs for scalable machine learning";
     homepage = http://tensorflow.org;
     license = licenses.asl20;
-    maintainers = with maintainers; [ jyp abbradar ];
     platforms = with platforms; linux ++ lib.optionals (!cudaSupport) darwin;
     # Python 2.7 build uses different string encoding.
     # See https://github.com/NixOS/nixpkgs/pull/37044#issuecomment-373452253

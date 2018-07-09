@@ -189,6 +189,5 @@ stdenv.mkDerivation {
       url = http://www.mozilla.org/en-US/foundation/trademarks/policy/;
     };
     platforms = builtins.attrNames mozillaPlatforms;
-    maintainers = with maintainers; [ garbas ];
   };
 }
