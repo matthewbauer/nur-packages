@@ -13,6 +13,11 @@ let
       inherit (pkgs.gnome3) defaultIconTheme;
     };
     tor-browser-bundle-bin = callPackage ./tor-browser-bundle-bin {};
+    thunderbird-bin = callPackage ./thunderbird-bin {
+      gconf = pkgs.gnome2.GConf;
+      inherit (pkgs.gnome2) libgnome libgnomeui;
+      inherit (pkgs.gnome3) defaultIconTheme;
+    };
   };
 
   aliases = {
