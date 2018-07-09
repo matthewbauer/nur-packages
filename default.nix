@@ -18,6 +18,7 @@ let
       inherit (pkgs.gnome2) libgnome libgnomeui;
       inherit (pkgs.gnome3) defaultIconTheme;
     };
+    iosevka-bin = callPackage ../iosevka-bin {};
   };
 
   aliases = {
