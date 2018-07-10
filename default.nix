@@ -1,5 +1,9 @@
 { pkgs ? import <nixpkgs> (builtins.removeAttrs args ["pkgs"] )
+
+# needed so nix will put them in args list
+# do not use directly!
 , config ? null, localSystem ? null, crossSystem ? null, system ? null
+
 , ... } @ args:
 
 let
@@ -18,7 +22,8 @@ let
       inherit (pkgs.gnome2) libgnome libgnomeui;
       inherit (pkgs.gnome3) defaultIconTheme;
     };
-    iosevka-bin = callPackage ../iosevka-bin {};
+    iosevka-bin = callPackage ./iosevka-bin {};
+    frostwire-bin = callPackage ./frostwire-bin {};
   };
 
   aliases = {
